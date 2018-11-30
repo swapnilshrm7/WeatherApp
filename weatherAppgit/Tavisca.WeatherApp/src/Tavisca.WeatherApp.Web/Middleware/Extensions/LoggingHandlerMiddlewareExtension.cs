@@ -1,0 +1,16 @@
+﻿using System;
+using Microsoft.AspNetCore.Builder;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Tavisca.WeatherApp.Web.Middleware
+{
+    public static class LoggingHandlerMiddlewareExtension
+    {
+        public static IApplicationBuilder UseLogginerHandler(this IApplicationBuilder builder)
+        {
+            return builder.UseMiddleware<LoggingHandlerMiddleware>();
+        }
+    }
+}
